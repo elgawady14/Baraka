@@ -16,6 +16,8 @@
 		4A40D2FE2840E84A00FA1848 /* BarakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D2FD2840E84A00FA1848 /* BarakaTests.swift */; };
 		4A40D3082840E84A00FA1848 /* BarakaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3072840E84A00FA1848 /* BarakaUITests.swift */; };
 		4A40D30A2840E84A00FA1848 /* BarakaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3092840E84A00FA1848 /* BarakaUITestsLaunchTests.swift */; };
+		4A40D31E2840EC2500FA1848 /* StockTickers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D31D2840EC2500FA1848 /* StockTickers.csv */; };
+		4A40D3242840ED1000FA1848 /* NewsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D3232840ED0D00FA1848 /* NewsFeed.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		4A40D3032840E84A00FA1848 /* BarakaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarakaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A40D3072840E84A00FA1848 /* BarakaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarakaUITests.swift; sourceTree = "<group>"; };
 		4A40D3092840E84A00FA1848 /* BarakaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarakaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A40D31D2840EC2500FA1848 /* StockTickers.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = StockTickers.csv; sourceTree = "<group>"; };
+		4A40D3232840ED0D00FA1848 /* NewsFeed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewsFeed.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,14 @@
 		4A40D2E52840E84800FA1848 /* Baraka */ = {
 			isa = PBXGroup;
 			children = (
+				4A40D31C2840EB2C00FA1848 /* Utilities */,
+				4A40D31B2840EB1B00FA1848 /* Resources */,
+				4A40D31A2840EB0400FA1848 /* Controller */,
+				4A40D3192840EAD200FA1848 /* View Model */,
+				4A40D3182840EAC800FA1848 /* View */,
+				4A40D3162840EAB300FA1848 /* Model */,
 				4A40D2E62840E84800FA1848 /* AppDelegate.swift */,
 				4A40D2E82840E84800FA1848 /* SceneDelegate.swift */,
-				4A40D2EA2840E84800FA1848 /* ViewController.swift */,
 				4A40D2EC2840E84800FA1848 /* Main.storyboard */,
 				4A40D2EF2840E84900FA1848 /* Assets.xcassets */,
 				4A40D2F12840E84900FA1848 /* LaunchScreen.storyboard */,
@@ -125,6 +134,59 @@
 				4A40D3092840E84A00FA1848 /* BarakaUITestsLaunchTests.swift */,
 			);
 			path = BarakaUITests;
+			sourceTree = "<group>";
+		};
+		4A40D3162840EAB300FA1848 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A40D3182840EAC800FA1848 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A40D3192840EAD200FA1848 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4A40D31A2840EB0400FA1848 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A40D2EA2840E84800FA1848 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A40D31B2840EB1B00FA1848 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A40D31D2840EC2500FA1848 /* StockTickers.csv */,
+				4A40D3232840ED0D00FA1848 /* NewsFeed.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4A40D31C2840EB2C00FA1848 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A40D3252840EE3F00FA1848 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4A40D3252840EE3F00FA1848 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +296,8 @@
 				4A40D2F32840E84900FA1848 /* LaunchScreen.storyboard in Resources */,
 				4A40D2F02840E84900FA1848 /* Assets.xcassets in Resources */,
 				4A40D2EE2840E84800FA1848 /* Main.storyboard in Resources */,
+				4A40D31E2840EC2500FA1848 /* StockTickers.csv in Resources */,
+				4A40D3242840ED1000FA1848 /* NewsFeed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
