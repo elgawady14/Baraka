@@ -24,6 +24,8 @@
 		4A40D32D28410A2900FA1848 /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D32C28410A2900FA1848 /* NewsFeed.swift */; };
 		4A40D32F28410B3B00FA1848 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D32E28410B3B00FA1848 /* Article.swift */; };
 		4A40D33128410E4C00FA1848 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D33028410E4C00FA1848 /* Constants.swift */; };
+		4A40D33528411E8000FA1848 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D33428411E8000FA1848 /* UIImageView+Extension.swift */; };
+		EC259B7316F1839ED1F36C8C /* Pods_Baraka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E8C095533552274BF3AF0A /* Pods_Baraka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		4A40D32C28410A2900FA1848 /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
 		4A40D32E28410B3B00FA1848 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		4A40D33028410E4C00FA1848 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4A40D33428411E8000FA1848 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		58E8C095533552274BF3AF0A /* Pods_Baraka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baraka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61896B76F56E7F80DFA7094 /* Pods-Baraka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.release.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.release.xcconfig"; sourceTree = "<group>"; };
+		DCF4B16374DDF5DBC73B84D4 /* Pods-Baraka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.debug.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC259B7316F1839ED1F36C8C /* Pods_Baraka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06F68859950D5B0EFA4CB98E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58E8C095533552274BF3AF0A /* Pods_Baraka.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A40D2DA2840E84800FA1848 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +114,8 @@
 				4A40D2FC2840E84A00FA1848 /* BarakaTests */,
 				4A40D3062840E84A00FA1848 /* BarakaUITests */,
 				4A40D2E42840E84800FA1848 /* Products */,
+				5D0E4881A8F3772E242E8448 /* Pods */,
+				06F68859950D5B0EFA4CB98E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,8 +220,18 @@
 		4A40D3252840EE3F00FA1848 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4A40D33428411E8000FA1848 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5D0E4881A8F3772E242E8448 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCF4B16374DDF5DBC73B84D4 /* Pods-Baraka.debug.xcconfig */,
+				B61896B76F56E7F80DFA7094 /* Pods-Baraka.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A40D30D2840E84A00FA1848 /* Build configuration list for PBXNativeTarget "Baraka" */;
 			buildPhases = (
+				27E58DF797DB8E71E9CEB463 /* [CP] Check Pods Manifest.lock */,
 				4A40D2DF2840E84800FA1848 /* Sources */,
 				4A40D2E02840E84800FA1848 /* Frameworks */,
 				4A40D2E12840E84800FA1848 /* Resources */,
+				81823BAF55773DB70F782EDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,11 +364,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27E58DF797DB8E71E9CEB463 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Baraka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81823BAF55773DB70F782EDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Baraka/Pods-Baraka-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Baraka/Pods-Baraka-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Baraka/Pods-Baraka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A40D2DF2840E84800FA1848 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A40D33528411E8000FA1848 /* UIImageView+Extension.swift in Sources */,
 				4A40D32B2841056A00FA1848 /* DataConvertor.swift in Sources */,
 				4A40D329284102BD00FA1848 /* StockTicker.swift in Sources */,
 				4A40D2EB2840E84800FA1848 /* ViewController.swift in Sources */,
@@ -454,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -508,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -520,6 +592,7 @@
 		};
 		4A40D30E2840E84A00FA1848 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF4B16374DDF5DBC73B84D4 /* Pods-Baraka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -534,6 +607,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,6 +623,7 @@
 		};
 		4A40D30F2840E84A00FA1848 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B61896B76F56E7F80DFA7094 /* Pods-Baraka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -563,6 +638,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
