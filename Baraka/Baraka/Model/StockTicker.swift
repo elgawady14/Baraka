@@ -7,11 +7,7 @@
 
 import Foundation
 
-struct StockTicker: Encodable {
+struct StockTicker {
     var symbol: String
     var prices: [Double]
-    
-    enum CodingKeys: String, CodingKey {
-        case symbol = ""
-    }
 }
