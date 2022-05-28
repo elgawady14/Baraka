@@ -16,7 +16,7 @@ class StockTickerCell: UICollectionViewCell {
     var stockTicker: StockTicker! {
         didSet {
             symbolLabel.text = stockTicker.symbol
-            priceLabel.text = "\((stockTicker.prices.randomElement() ?? 0).round())"
+            priceLabel.text = "$\((stockTicker.prices.randomElement() ?? 0).round())"
             tickerImage.image = UIImage(systemName: stockTicker.prices[currentIndex] > .zero ?  "arrowtriangle.up.fill" : "arrowtriangle.down.fill")
             tickerImage.tintColor = stockTicker.prices[currentIndex] > .zero ? UIColor.systemGreen : UIColor.systemRed
         }

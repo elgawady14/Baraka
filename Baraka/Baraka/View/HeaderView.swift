@@ -23,7 +23,7 @@ class HeaderView: UICollectionReusableView {
 
 extension HeaderView {
   func configure() {
-    backgroundColor = .systemBackground
+    backgroundColor = .clear
 
     addSubview(label)
     label.translatesAutoresizingMaskIntoConstraints = false

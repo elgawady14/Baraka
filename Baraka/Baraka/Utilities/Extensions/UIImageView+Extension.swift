@@ -21,4 +21,11 @@ extension UIImageView {
             completion?(downLoadedImage)
         })
     }
+    
+    func cornerRadius(_ value: CGFloat, borderWidth: CGFloat = .zero, borderColor: UIColor) {
+        layer.masksToBounds = true
+        layer.cornerRadius = value
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
+    }
 }

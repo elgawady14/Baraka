@@ -32,6 +32,9 @@
 		4A40D3432841357000FA1848 /* StockTickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3412841357000FA1848 /* StockTickerCell.swift */; };
 		4A40D34528414A7F00FA1848 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D34428414A7F00FA1848 /* HeaderView.swift */; };
 		4A40D3472841753200FA1848 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3462841753200FA1848 /* Double+Extension.swift */; };
+		4A40D34A284235ED00FA1848 /* SmallNewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */; };
+		4A40D34B284235ED00FA1848 /* SmallNewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */; };
+		4A40D34D28428BC400FA1848 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D34C28428BC400FA1848 /* SectionData.swift */; };
 		EC259B7316F1839ED1F36C8C /* Pods_Baraka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E8C095533552274BF3AF0A /* Pods_Baraka.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,9 @@
 		4A40D3412841357000FA1848 /* StockTickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTickerCell.swift; sourceTree = "<group>"; };
 		4A40D34428414A7F00FA1848 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		4A40D3462841753200FA1848 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallNewsFeedCell.xib; sourceTree = "<group>"; };
+		4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallNewsFeedCell.swift; sourceTree = "<group>"; };
+		4A40D34C28428BC400FA1848 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
 		58E8C095533552274BF3AF0A /* Pods_Baraka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baraka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61896B76F56E7F80DFA7094 /* Pods-Baraka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.release.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.release.xcconfig"; sourceTree = "<group>"; };
 		DCF4B16374DDF5DBC73B84D4 /* Pods-Baraka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.debug.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +191,7 @@
 				4A40D328284102BD00FA1848 /* StockTicker.swift */,
 				4A40D32C28410A2900FA1848 /* NewsFeed.swift */,
 				4A40D32E28410B3B00FA1848 /* Article.swift */,
+				4A40D34C28428BC400FA1848 /* SectionData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +202,8 @@
 				4A40D3412841357000FA1848 /* StockTickerCell.swift */,
 				4A40D3402841357000FA1848 /* StockTickerCell.xib */,
 				4A40D34428414A7F00FA1848 /* HeaderView.swift */,
+				4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */,
+				4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,6 +381,7 @@
 				4A40D3422841357000FA1848 /* StockTickerCell.xib in Resources */,
 				4A40D2F32840E84900FA1848 /* LaunchScreen.storyboard in Resources */,
 				4A40D2F02840E84900FA1848 /* Assets.xcassets in Resources */,
+				4A40D34A284235ED00FA1848 /* SmallNewsFeedCell.xib in Resources */,
 				4A40D2EE2840E84800FA1848 /* Main.storyboard in Resources */,
 				4A40D31E2840EC2500FA1848 /* StockTickers.csv in Resources */,
 				4A40D3242840ED1000FA1848 /* NewsFeed.json in Resources */,
@@ -446,11 +456,13 @@
 				4A40D32B2841056A00FA1848 /* DataConvertor.swift in Sources */,
 				4A40D329284102BD00FA1848 /* StockTicker.swift in Sources */,
 				4A40D3472841753200FA1848 /* Double+Extension.swift in Sources */,
+				4A40D34D28428BC400FA1848 /* SectionData.swift in Sources */,
 				4A40D2EB2840E84800FA1848 /* NewsFeedController.swift in Sources */,
 				4A40D2E72840E84800FA1848 /* AppDelegate.swift in Sources */,
 				4A40D32F28410B3B00FA1848 /* Article.swift in Sources */,
 				4A40D33E2841305600FA1848 /* CustomBinding.swift in Sources */,
 				4A40D3432841357000FA1848 /* StockTickerCell.swift in Sources */,
+				4A40D34B284235ED00FA1848 /* SmallNewsFeedCell.swift in Sources */,
 				4A40D33B28412F9100FA1848 /* NewsFeedViewModel.swift in Sources */,
 				4A40D34528414A7F00FA1848 /* HeaderView.swift in Sources */,
 				4A40D2E92840E84800FA1848 /* SceneDelegate.swift in Sources */,
@@ -639,7 +651,7 @@
 				INFOPLIST_FILE = Baraka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -652,7 +664,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -669,7 +681,7 @@
 				INFOPLIST_FILE = Baraka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -682,7 +694,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

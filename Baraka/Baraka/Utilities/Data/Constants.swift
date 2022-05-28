@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import CoreGraphics
 struct Constants {
     static let StockTickersFileName = "StockTickers"
     static let StockTickersFileType = "csv"
@@ -15,5 +15,13 @@ struct Constants {
     
     static let sectionHeaderElementKind = "HeaderView"
     static let HeaderViewReuseIdentifier = "HeaderView"
+    
+    static let StockTickersGroupWidth = 145.0
+    static let StockTickersGroupHeight = 20.5
+    static let PopularNewsFeedGroupWidth = 200.0
+    static let PopularNewsFeedGroupHeight = 250.0
+    static let PopularNewsFeedGroupSpace = CGFloat(6.0)
+
+    
 
 }

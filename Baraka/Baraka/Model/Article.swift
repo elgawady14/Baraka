@@ -10,13 +10,13 @@ import Foundation
 struct Article: Codable, Hashable {
     var title: String
     var description: String
-    var image: String
+    var imageURL: String
     var date: String
 
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case description = "description"
-        case image = "urlToImage"
+        case imageURL = "urlToImage"
         case date = "publishedAt"
     }
     

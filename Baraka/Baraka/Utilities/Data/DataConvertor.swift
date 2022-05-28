@@ -9,6 +9,7 @@ import Foundation
 
 class DataConvertor {
     
+    
     static func fetchStockTickers() -> [StockTicker] {
         guard let csvString = Parser.readDataFromFile(name: Constants.StockTickersFileName, type: Constants.StockTickersFileType) else {
             debugPrint("Error in reading the CSV file!")

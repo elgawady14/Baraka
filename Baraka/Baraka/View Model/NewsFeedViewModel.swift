@@ -8,5 +8,12 @@
 import Foundation
 
 class NewsFeedViewModel {
-    var stockTickers: [StockTicker] = DataConvertor.fetchStockTickers()
+    var stockTickers: [SectionData] = DataConvertor.fetchStockTickers().map { SectionData(stockTicker: $0)
+    }
+    
+    var popularNewsFeed: [SectionData] = (DataConvertor.fetchNewsFeed()?.articles.prefix(6) ?? []).map { SectionData(article: $0)
+    }
+    
+    var allNewsFeed: [SectionData] = (DataConvertor.fetchNewsFeed()?.articles ?? []).map { SectionData(article: $0)
+    }
 }
