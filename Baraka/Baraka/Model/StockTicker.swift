@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct StockTicker {
+struct StockTicker: Hashable {
     var symbol: String
     var prices: [Double]
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
+    private let identifier = UUID()
 }

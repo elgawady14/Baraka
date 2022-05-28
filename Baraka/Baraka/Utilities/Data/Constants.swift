@@ -12,4 +12,8 @@ struct Constants {
     static let StockTickersFileType = "csv"
     static let NewsFeedFileName = "NewsFeed"
     static let NewsFeedFileType = "json"
+    
+    static let sectionHeaderElementKind = "HeaderView"
+    static let HeaderViewReuseIdentifier = "HeaderView"
+
 }

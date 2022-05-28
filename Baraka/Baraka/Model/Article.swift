@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Article: Codable {
+struct Article: Codable, Hashable {
     var title: String
     var description: String
     var image: String
@@ -19,4 +19,10 @@ struct Article: Codable {
         case image = "urlToImage"
         case date = "publishedAt"
     }
+    
+    func hash(into hasher: inout Hasher) {
+      hasher.combine(identifier)
+    }
+    
+    private let identifier = UUID()
 }
