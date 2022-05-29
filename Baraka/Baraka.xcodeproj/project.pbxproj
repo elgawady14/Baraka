@@ -35,6 +35,8 @@
 		4A40D34A284235ED00FA1848 /* SmallNewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */; };
 		4A40D34B284235ED00FA1848 /* SmallNewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */; };
 		4A40D34D28428BC400FA1848 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D34C28428BC400FA1848 /* SectionData.swift */; };
+		4A40D3502842D35000FA1848 /* LargeNewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D34E2842D35000FA1848 /* LargeNewsFeedCell.xib */; };
+		4A40D3512842D35000FA1848 /* LargeNewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D34F2842D35000FA1848 /* LargeNewsFeedCell.swift */; };
 		EC259B7316F1839ED1F36C8C /* Pods_Baraka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E8C095533552274BF3AF0A /* Pods_Baraka.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallNewsFeedCell.xib; sourceTree = "<group>"; };
 		4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallNewsFeedCell.swift; sourceTree = "<group>"; };
 		4A40D34C28428BC400FA1848 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		4A40D34E2842D35000FA1848 /* LargeNewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeNewsFeedCell.xib; sourceTree = "<group>"; };
+		4A40D34F2842D35000FA1848 /* LargeNewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNewsFeedCell.swift; sourceTree = "<group>"; };
 		58E8C095533552274BF3AF0A /* Pods_Baraka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baraka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61896B76F56E7F80DFA7094 /* Pods-Baraka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.release.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.release.xcconfig"; sourceTree = "<group>"; };
 		DCF4B16374DDF5DBC73B84D4 /* Pods-Baraka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.debug.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.debug.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				4A40D34428414A7F00FA1848 /* HeaderView.swift */,
 				4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */,
 				4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */,
+				4A40D34E2842D35000FA1848 /* LargeNewsFeedCell.xib */,
+				4A40D34F2842D35000FA1848 /* LargeNewsFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 			files = (
 				4A40D3422841357000FA1848 /* StockTickerCell.xib in Resources */,
 				4A40D2F32840E84900FA1848 /* LaunchScreen.storyboard in Resources */,
+				4A40D3502842D35000FA1848 /* LargeNewsFeedCell.xib in Resources */,
 				4A40D2F02840E84900FA1848 /* Assets.xcassets in Resources */,
 				4A40D34A284235ED00FA1848 /* SmallNewsFeedCell.xib in Resources */,
 				4A40D2EE2840E84800FA1848 /* Main.storyboard in Resources */,
@@ -461,6 +468,7 @@
 				4A40D2E72840E84800FA1848 /* AppDelegate.swift in Sources */,
 				4A40D32F28410B3B00FA1848 /* Article.swift in Sources */,
 				4A40D33E2841305600FA1848 /* CustomBinding.swift in Sources */,
+				4A40D3512842D35000FA1848 /* LargeNewsFeedCell.swift in Sources */,
 				4A40D3432841357000FA1848 /* StockTickerCell.swift in Sources */,
 				4A40D34B284235ED00FA1848 /* SmallNewsFeedCell.swift in Sources */,
 				4A40D33B28412F9100FA1848 /* NewsFeedViewModel.swift in Sources */,

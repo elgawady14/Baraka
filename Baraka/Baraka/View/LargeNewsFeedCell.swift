@@ -1,26 +1,30 @@
 //
-//  SmallNewsFeedCell.swift
+//  LargeNewsFeedCell.swift
 //  Baraka
 //
-//  Created by Ahmed Abduljawad on 28/05/2022.
+//  Created by Ahmed Abduljawad on 29/05/2022.
 //
 
 import UIKit
 
-class SmallNewsFeedCell: UICollectionViewCell {
-
+class LargeNewsFeedCell: UICollectionViewCell {
+    
     @IBOutlet weak var containerView: UIView! {
         didSet {
             containerView.cornerRadius(12.0)
         }
     }
-    @IBOutlet weak var articleImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var articleImage: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     var currentIndex = 0
     var article: Article! {
         didSet {
-            articleImage.setImageWithIndicator(url: article.imageURL)
             titleLabel.text = article.title
+            articleImage.setImageWithIndicator(url: article.imageURL)
+            dateLabel.text = article.date
+            descriptionLabel.text = article.description
         }
     }
     

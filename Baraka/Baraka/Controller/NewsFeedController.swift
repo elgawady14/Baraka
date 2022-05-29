@@ -11,8 +11,8 @@ class NewsFeedController: UIViewController {
     
     enum Section: String, CaseIterable {
         case stockTickers = "Stock Tickers"
-        case popular = "Popular News"
-        case newsFeed = "News Feed"
+        case popularNewsFeed = "Popular News Feed"
+        case remindedNewsFeed = "reminded News Feed"
     }
     private var newsFeedDataSource: UICollectionViewDiffableDataSource<Section, SectionData>! = nil
     private var newsFeedCollectionView: UICollectionView! = nil
@@ -35,7 +35,6 @@ extension NewsFeedController {
     fileprivate func configureCollectionView() {
         let collectionView = UICollectionView(frame: view.bounds,
                                               collectionViewLayout: generateLayout())
-        
         collectionView.contentInset = UIEdgeInsets(top: 16,
                                                    left: 16,
                                                    bottom: 16,
@@ -43,15 +42,16 @@ extension NewsFeedController {
         view.addSubview(collectionView)
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.backgroundColor = .systemBackground
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = true
         collectionView.registerNib(className: StockTickerCell.self)
         collectionView.registerNib(className: SmallNewsFeedCell.self)
-        
+        collectionView.registerNib(className: LargeNewsFeedCell.self)
         // collectionView.registerNib(className: HeaderView.self)
         collectionView.register(HeaderView.self,
                                 forSupplementaryViewOfKind: Constants.sectionHeaderElementKind,
                                 withReuseIdentifier: Constants.HeaderViewReuseIdentifier)
-         
-        //collectionView.isScrollEnabled = true
+        // collectionView.isScrollEnabled = true
 //        collectionView.showsHorizontalScrollIndicator = true
         newsFeedCollectionView = collectionView
     }
@@ -73,7 +73,12 @@ extension NewsFeedController {
                 }
                 cell.article = sectionData.secondSectionArticle
                 return cell
-//            case 2:
+            case 2:
+                guard let cell = collectionView.dequeueCell(LargeNewsFeedCell.self, indexPath) else {
+                    fatalError("Could not create new cell")
+                }
+                cell.article = sectionData.thirdSectionArticle
+                return cell
             default: return nil
             }
             
@@ -113,6 +118,15 @@ extension NewsFeedController {
                                                                    heightDimension: .absolute(Constants.StockTickersGroupHeight))
                 let stockTickersGroup = NSCollectionLayoutGroup.horizontal(layoutSize: stockTickersGroupSize,
                                                                            subitems: [stockTickerItem])
+//                let headerSize = NSCollectionLayoutSize(widthDimension: .absolute(0),
+//                                                        heightDimension: .absolute(44))
+//                let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+//                                                                                elementKind: Constants.sectionHeaderElementKind,
+//                                                                                alignment: .topLeading)
+//                sectionHeader.pinToVisibleBounds = true
+//                let section = NSCollectionLayoutSection(group: popularNewsFeedGroup)
+//                section.boundarySupplementaryItems = [sectionHeader]
+//                return section
                 let section = NSCollectionLayoutSection(group: stockTickersGroup)
                 section.interGroupSpacing = 10
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
@@ -133,52 +147,38 @@ extension NewsFeedController {
                 section.interGroupSpacing = 10
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
                 section.orthogonalScrollingBehavior = .continuous
-
                 return section
-//            case 2:
+            case 2:
+                // All News Feed Item & Group
+                let newsFeedItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),                                                                                           heightDimension: .fractionalHeight(1.0))
+                let newsFeedItem = NSCollectionLayoutItem(layoutSize: newsFeedItemSize)
+                newsFeedItem.contentInsets = NSDirectionalEdgeInsets(top: Constants.PopularNewsFeedGroupSpace,
+                                                                            leading: Constants.PopularNewsFeedGroupSpace,
+                                                                            bottom: Constants.PopularNewsFeedGroupSpace,
+                                                                            trailing: Constants.PopularNewsFeedGroupSpace)
+                let newsFeedGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),                                                                                           heightDimension: .absolute(Constants.NewsFeedGroupHeight))
+                let newsFeedGroup = NSCollectionLayoutGroup.vertical(layoutSize: newsFeedGroupSize,
+                                                                              subitems: [newsFeedItem])
+                let section = NSCollectionLayoutSection(group: newsFeedGroup)
+                //section.interGroupSpacing = 10
+                section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
+                //section.orthogonalScrollingBehavior = .continuous
+                return section
             default: return nil
             }
         }
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
-        //configuration.scrollDirection = .none
         let layout = UICollectionViewCompositionalLayout(sectionProvider: sectionProvider)
         layout.configuration = configuration
         return layout
-        /*let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            // Stock Ticker Item & Group
-            /*let stockTickerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(Constants.StockTickersGroupHeight))
-            let stockTickerItem = NSCollectionLayoutItem(layoutSize: stockTickerItemSize)
-            let stockTickersGroupSize = NSCollectionLayoutSize(widthDimension: .estimated(Constants.StockTickersGroupWidth), heightDimension: .absolute(Constants.StockTickersGroupHeight))
-            let stockTickersGroup = NSCollectionLayoutGroup.horizontal(layoutSize: stockTickersGroupSize, subitems: [stockTickerItem])
-            */
-            // Popular News Feed Item & Group
-            let popularNewsFeedItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),                                                                                           heightDimension: .fractionalHeight(1.0))
-            let popularNewsFeedItem = NSCollectionLayoutItem(layoutSize: popularNewsFeedItemSize)
-            popularNewsFeedItem.contentInsets = NSDirectionalEdgeInsets(top: Constants.PopularNewsFeedGroupSpace,
-                                                                        leading: Constants.PopularNewsFeedGroupSpace,
-                                                                        bottom: Constants.PopularNewsFeedGroupSpace,
-                                                                        trailing: Constants.PopularNewsFeedGroupSpace)
-            let popularNewsFeedGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),                                                                                           heightDimension: .absolute(Constants.PopularNewsFeedGroupHeight))
-            let popularNewsFeedGroup = NSCollectionLayoutGroup.horizontal(layoutSize: popularNewsFeedGroupSize,
-                                                                          subitems: [popularNewsFeedItem])
-            let headerSize = NSCollectionLayoutSize(widthDimension: .absolute(0),
-                                                    heightDimension: .absolute(44))
-            let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-                                                                            elementKind: Constants.sectionHeaderElementKind,
-                                                                            alignment: .topLeading)
-            sectionHeader.pinToVisibleBounds = true
-            let section = NSCollectionLayoutSection(group: popularNewsFeedGroup)
-            section.boundarySupplementaryItems = [sectionHeader]
-            return section
-        }*/
-        
     }
     
     func snapshotForCurrentNewsFeedState() -> NSDiffableDataSourceSnapshot<Section, SectionData> {
         var snapshot = NSDiffableDataSourceSnapshot<Section, SectionData>()
-        snapshot.appendSections([Section.stockTickers, Section.popular])
+        snapshot.appendSections([Section.stockTickers, Section.popularNewsFeed, Section.remindedNewsFeed])
         snapshot.appendItems(viewModel.stockTickers, toSection: .stockTickers)
-        snapshot.appendItems(viewModel.popularNewsFeed, toSection: .popular)
+        snapshot.appendItems(viewModel.popularNewsFeed, toSection: .popularNewsFeed)
+        snapshot.appendItems(viewModel.remindedNewsFeed, toSection: .remindedNewsFeed)
         return snapshot
     }
 }

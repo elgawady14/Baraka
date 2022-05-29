@@ -19,7 +19,9 @@ struct Constants {
     static let StockTickersGroupWidth = 145.0
     static let StockTickersGroupHeight = 20.5
     static let PopularNewsFeedGroupWidth = 200.0
-    static let PopularNewsFeedGroupHeight = 250.0
+    static let PopularNewsFeedGroupHeight = 200.0
+    static let NewsFeedGroupWidth = 200.0
+    static let NewsFeedGroupHeight = 350.0
     static let PopularNewsFeedGroupSpace = CGFloat(6.0)
 
     

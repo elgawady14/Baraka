@@ -10,10 +10,12 @@ import Foundation
 struct SectionData: Hashable {
     var stockTicker: StockTicker?
     var secondSectionArticle: Article?
-    
-    init(stockTicker: StockTicker? = nil, article: Article? = nil) {
+    var thirdSectionArticle: Article?
+
+    init(stockTicker: StockTicker? = nil, secondSectionArticle: Article? = nil, thirdSectionArticle: Article? = nil) {
         self.stockTicker = stockTicker
-        self.secondSectionArticle = article
+        self.secondSectionArticle = secondSectionArticle
+        self.thirdSectionArticle = thirdSectionArticle
     }
     
     func hash(into hasher: inout Hasher) {
