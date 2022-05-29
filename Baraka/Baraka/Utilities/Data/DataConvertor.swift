@@ -31,7 +31,6 @@ class DataConvertor {
         let jsonData = Data(jsonString.utf8)
         do {
             let newsFeed = try JSONDecoder().decode(NewsFeed.self, from: jsonData)
-            debugPrint(newsFeed)
             return newsFeed
         } catch {
             debugPrint("Error in decoding the JSON data: \(error.localizedDescription)")

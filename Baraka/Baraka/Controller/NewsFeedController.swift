@@ -25,8 +25,30 @@ class NewsFeedController: UIViewController {
     }
     
     func preSettings() {
+        viewModel.isLoadingNewPrices.bind { [weak self] value in
+            if value {
+                self?.refreshStockTickersData()
+            }
+        }
         configureCollectionView()
         configureDataSource()
+    }
+}
+
+extension NewsFeedController {
+    /// Get called every 1000 milliseconds when the stock new prices timer get fired.
+    func refreshStockTickersData() {
+        var currentSnapshot = newsFeedDataSource.snapshot()
+        
+         // In iOS 15, Apple introduced a new reconfigureItems(_:) snapshots
+         // method that helps developers to reload a cell more efficiently.
+        if #available(iOS 15.0, *) {
+             currentSnapshot.reconfigureItems(viewModel.stockTickers)
+        } else {
+            // Fallback on earlier versions
+            currentSnapshot.reloadSections([Section.stockTickers])
+        }
+        newsFeedDataSource.apply(currentSnapshot, animatingDifferences: false)
     }
 }
 

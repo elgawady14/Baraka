@@ -18,7 +18,7 @@ struct Parser {
         for row in rows {
             let columns = row.components(separatedBy: ",")
             if columns.count == 2 {
-                if result[columns.first!] != nil {
+                if result[columns.first!.replacingOccurrences(of: "\"", with: "")] != nil {
                     result[columns.first!.replacingOccurrences(of: "\"", with: "")]!.append(Double(columns.last!.replacingOccurrences(of: " ", with: ""))!)
                 } else {
                     result[columns.first!.replacingOccurrences(of: "\"", with: "")] = [Double(columns.last!.replacingOccurrences(of: " ", with: ""))!]

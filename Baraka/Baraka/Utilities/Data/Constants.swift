@@ -23,7 +23,10 @@ struct Constants {
     static let NewsFeedGroupWidth = 200.0
     static let NewsFeedGroupHeight = 350.0
     static let PopularNewsFeedGroupSpace = CGFloat(6.0)
+    
+    static let PricesTimeInterval = TimeInterval(1.0)
 
+    
     
 
 }
