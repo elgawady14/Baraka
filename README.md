@@ -2,7 +2,10 @@
 **User Story** 
 Create a Mobile App to display news feed and stock tickers.
 ## Screenshots
+<img src="https://user-images.githubusercontent.com/4243489/170902387-22e62044-6809-40b9-b0c6-48b0255d314c.png" width="400" height="800">
+<img src="https://user-images.githubusercontent.com/4243489/170902384-f6ebd42e-9a20-4e1b-9bf9-1e1bfd104524.png" width="400" height="800">
 
+## Features
 1. Support Light & Dark modes.
 2. Unit testing coverage 85.9%
 3. Support all screen orientations
