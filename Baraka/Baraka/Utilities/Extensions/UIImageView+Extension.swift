@@ -10,6 +10,7 @@ import SDWebImage
 
 extension UIImageView {
     
+    /// An async image downloader and also used to cache images in memory.
     func setImageWithIndicator(url: String?, completion: ((UIImage?)->())? = nil) {
         guard let _ = url, let theUrl = URL(string: url!) else {
             image = UIImage(named: "")

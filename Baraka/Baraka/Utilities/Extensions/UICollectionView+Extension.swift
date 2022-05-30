@@ -9,16 +9,21 @@ import UIKit
 
 extension UICollectionView {
     
-    func dequeueCell<CellOrView: NSObject>(_ type: CellOrView.Type, _ indexPath: IndexPath?) -> CellOrView? {
+    /// Instead of writing the cell identifiers in a text format;
+    /// this method used to get the cell identifier value from the cell class name
+    /// also it's used in data type casting in a generic way.
+    func dequeueCell<T: NSObject>(_ type: T.Type, _ indexPath: IndexPath?) -> T? {
         
         if type.superclass() == UICollectionViewCell.self {
-            return dequeueReusableCell(withReuseIdentifier: String(describing: type), for: indexPath!) as? CellOrView
+            return dequeueReusableCell(withReuseIdentifier: String(describing: type), for: indexPath!) as? T
         } else if type.superclass() == UICollectionReusableView.self {
-            return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: type), for: indexPath!) as? CellOrView
+            return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: type), for: indexPath!) as? T
         } else { return nil }
     }
-    
-    func registerNib<CellOrView: NSObject>(className: CellOrView.Type) {
+    /// Instead of writing the nib name in a text format;
+    /// this method used to get the nib name value from the nib class name
+    /// also it's used in data type casting in a generic way.
+    func registerNib<T: NSObject>(className: T.Type) {
         
         let classStr = String(describing: className)
         let nib = UINib(nibName: classStr, bundle: nil)

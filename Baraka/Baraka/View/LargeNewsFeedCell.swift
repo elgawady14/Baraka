@@ -32,5 +32,4 @@ class LargeNewsFeedCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

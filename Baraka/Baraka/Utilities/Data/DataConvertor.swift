@@ -9,7 +9,8 @@ import Foundation
 
 class DataConvertor {
     
-    
+    /// Convert a dictionary with unique keys like ["APPL": [155.38184866788663, 233.69882718213734], "TESLA": [219.8936707828164, -22.71744309448843]
+    /// to an array of `StockTicker` data type
     static func fetchStockTickers() -> [StockTicker] {
         guard let csvString = Parser.readDataFromFile(name: Constants.StockTickersFileName, type: Constants.StockTickersFileType) else {
             debugPrint("Error in reading the CSV file!")
@@ -23,6 +24,7 @@ class DataConvertor {
         return result
     }
     
+    /// Convert a string value in an object of `NewsFeed` data type.
     static func fetchNewsFeed() -> NewsFeed? {
         guard let jsonString = Parser.readDataFromFile(name: Constants.NewsFeedFileName, type: Constants.NewsFeedFileType) else {
             debugPrint("Error in reading the JSON file!")

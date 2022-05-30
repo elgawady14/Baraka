@@ -15,7 +15,7 @@ class StockTickerCell: UICollectionViewCell {
     var stockTicker: StockTicker! {
         didSet {
             symbolLabel.text = stockTicker.symbol
-            // Randomly fetch new price everytime the cell get loaded.
+            // Randomly fetch a new price everytime the cell get loaded.
             let currentPriceIndex = stockTicker.prices.indices.randomElement() ?? 0
             let currentPrice = stockTicker.prices[currentPriceIndex].round()
             priceLabel.text = "$\(currentPrice)"

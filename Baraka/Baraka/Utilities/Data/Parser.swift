@@ -8,7 +8,7 @@
 import Foundation
 
 struct Parser {
-
+    
     /// Convert data in a CSV file like `StockTickers.csv` into a dictionary with unique keys like ["APPL": [155.38184866788663, 233.69882718213734], "TESLA": [219.8936707828164, -22.71744309448843], .....]
     static func convertCSVString(toDictionary text: String) -> [String : [Double]] {
         var result: [String : [Double]] = [:]
@@ -28,6 +28,7 @@ struct Parser {
         return result
     }
     
+    /// Convert data in a `.json` file into a string value.
     static func readDataFromFile(name: String, type: String) -> String? {
         guard let filepath = Bundle.main.path(forResource: name, ofType: type) else {
             return nil
@@ -39,7 +40,4 @@ struct Parser {
             return nil
         }
     }
-    
-    
-
 }

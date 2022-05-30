@@ -10,10 +10,8 @@
 		4A40D2E72840E84800FA1848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D2E62840E84800FA1848 /* AppDelegate.swift */; };
 		4A40D2E92840E84800FA1848 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D2E82840E84800FA1848 /* SceneDelegate.swift */; };
 		4A40D2EB2840E84800FA1848 /* NewsFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D2EA2840E84800FA1848 /* NewsFeedController.swift */; };
-		4A40D2EE2840E84800FA1848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D2EC2840E84800FA1848 /* Main.storyboard */; };
 		4A40D2F02840E84900FA1848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D2EF2840E84900FA1848 /* Assets.xcassets */; };
 		4A40D2F32840E84900FA1848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D2F12840E84900FA1848 /* LaunchScreen.storyboard */; };
-		4A40D2FE2840E84A00FA1848 /* BarakaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D2FD2840E84A00FA1848 /* BarakaTests.swift */; };
 		4A40D3082840E84A00FA1848 /* BarakaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3072840E84A00FA1848 /* BarakaUITests.swift */; };
 		4A40D30A2840E84A00FA1848 /* BarakaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3092840E84A00FA1848 /* BarakaUITestsLaunchTests.swift */; };
 		4A40D31E2840EC2500FA1848 /* StockTickers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D31D2840EC2500FA1848 /* StockTickers.csv */; };
@@ -30,13 +28,17 @@
 		4A40D33E2841305600FA1848 /* CustomBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D33D2841305600FA1848 /* CustomBinding.swift */; };
 		4A40D3422841357000FA1848 /* StockTickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D3402841357000FA1848 /* StockTickerCell.xib */; };
 		4A40D3432841357000FA1848 /* StockTickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3412841357000FA1848 /* StockTickerCell.swift */; };
-		4A40D34528414A7F00FA1848 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D34428414A7F00FA1848 /* HeaderView.swift */; };
 		4A40D3472841753200FA1848 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3462841753200FA1848 /* Double+Extension.swift */; };
 		4A40D34A284235ED00FA1848 /* SmallNewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */; };
 		4A40D34B284235ED00FA1848 /* SmallNewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */; };
 		4A40D34D28428BC400FA1848 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D34C28428BC400FA1848 /* SectionData.swift */; };
 		4A40D3502842D35000FA1848 /* LargeNewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A40D34E2842D35000FA1848 /* LargeNewsFeedCell.xib */; };
 		4A40D3512842D35000FA1848 /* LargeNewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D34F2842D35000FA1848 /* LargeNewsFeedCell.swift */; };
+		4A40D3532843FE0E00FA1848 /* NewsFeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D3522843FE0E00FA1848 /* NewsFeedViewModelTests.swift */; };
+		4A40D355284400BE00FA1848 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D354284400BE00FA1848 /* TestConstants.swift */; };
+		4A40D356284400BE00FA1848 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D354284400BE00FA1848 /* TestConstants.swift */; };
+		4A40D35B28441E2800FA1848 /* DataConvertorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D35A28441E2800FA1848 /* DataConvertorTests.swift */; };
+		4A40D35D28442BDE00FA1848 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A40D35C28442BDE00FA1848 /* ParserTests.swift */; };
 		EC259B7316F1839ED1F36C8C /* Pods_Baraka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E8C095533552274BF3AF0A /* Pods_Baraka.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,12 +64,10 @@
 		4A40D2E62840E84800FA1848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A40D2E82840E84800FA1848 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A40D2EA2840E84800FA1848 /* NewsFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedController.swift; sourceTree = "<group>"; };
-		4A40D2ED2840E84800FA1848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A40D2EF2840E84900FA1848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A40D2F22840E84900FA1848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A40D2F42840E84900FA1848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A40D2F92840E84A00FA1848 /* BarakaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarakaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A40D2FD2840E84A00FA1848 /* BarakaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarakaTests.swift; sourceTree = "<group>"; };
 		4A40D3032840E84A00FA1848 /* BarakaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarakaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A40D3072840E84A00FA1848 /* BarakaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarakaUITests.swift; sourceTree = "<group>"; };
 		4A40D3092840E84A00FA1848 /* BarakaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarakaUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -85,13 +85,16 @@
 		4A40D33D2841305600FA1848 /* CustomBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBinding.swift; sourceTree = "<group>"; };
 		4A40D3402841357000FA1848 /* StockTickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockTickerCell.xib; sourceTree = "<group>"; };
 		4A40D3412841357000FA1848 /* StockTickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTickerCell.swift; sourceTree = "<group>"; };
-		4A40D34428414A7F00FA1848 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		4A40D3462841753200FA1848 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallNewsFeedCell.xib; sourceTree = "<group>"; };
 		4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallNewsFeedCell.swift; sourceTree = "<group>"; };
 		4A40D34C28428BC400FA1848 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
 		4A40D34E2842D35000FA1848 /* LargeNewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeNewsFeedCell.xib; sourceTree = "<group>"; };
 		4A40D34F2842D35000FA1848 /* LargeNewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeNewsFeedCell.swift; sourceTree = "<group>"; };
+		4A40D3522843FE0E00FA1848 /* NewsFeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModelTests.swift; sourceTree = "<group>"; };
+		4A40D354284400BE00FA1848 /* TestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
+		4A40D35A28441E2800FA1848 /* DataConvertorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConvertorTests.swift; sourceTree = "<group>"; };
+		4A40D35C28442BDE00FA1848 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		58E8C095533552274BF3AF0A /* Pods_Baraka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Baraka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61896B76F56E7F80DFA7094 /* Pods-Baraka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.release.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.release.xcconfig"; sourceTree = "<group>"; };
 		DCF4B16374DDF5DBC73B84D4 /* Pods-Baraka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Baraka.debug.xcconfig"; path = "Target Support Files/Pods-Baraka/Pods-Baraka.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,9 +165,8 @@
 				4A40D3192840EAD200FA1848 /* View Model */,
 				4A40D3182840EAC800FA1848 /* View */,
 				4A40D3162840EAB300FA1848 /* Model */,
-				4A40D2E62840E84800FA1848 /* AppDelegate.swift */,
 				4A40D2E82840E84800FA1848 /* SceneDelegate.swift */,
-				4A40D2EC2840E84800FA1848 /* Main.storyboard */,
+				4A40D2E62840E84800FA1848 /* AppDelegate.swift */,
 				4A40D2EF2840E84900FA1848 /* Assets.xcassets */,
 				4A40D2F12840E84900FA1848 /* LaunchScreen.storyboard */,
 				4A40D2F42840E84900FA1848 /* Info.plist */,
@@ -175,7 +177,10 @@
 		4A40D2FC2840E84A00FA1848 /* BarakaTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A40D2FD2840E84A00FA1848 /* BarakaTests.swift */,
+				4A40D35C28442BDE00FA1848 /* ParserTests.swift */,
+				4A40D3522843FE0E00FA1848 /* NewsFeedViewModelTests.swift */,
+				4A40D354284400BE00FA1848 /* TestConstants.swift */,
+				4A40D35A28441E2800FA1848 /* DataConvertorTests.swift */,
 			);
 			path = BarakaTests;
 			sourceTree = "<group>";
@@ -192,10 +197,10 @@
 		4A40D3162840EAB300FA1848 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A40D34C28428BC400FA1848 /* SectionData.swift */,
 				4A40D328284102BD00FA1848 /* StockTicker.swift */,
 				4A40D32C28410A2900FA1848 /* NewsFeed.swift */,
 				4A40D32E28410B3B00FA1848 /* Article.swift */,
-				4A40D34C28428BC400FA1848 /* SectionData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,7 +210,6 @@
 			children = (
 				4A40D3412841357000FA1848 /* StockTickerCell.swift */,
 				4A40D3402841357000FA1848 /* StockTickerCell.xib */,
-				4A40D34428414A7F00FA1848 /* HeaderView.swift */,
 				4A40D348284235ED00FA1848 /* SmallNewsFeedCell.xib */,
 				4A40D349284235ED00FA1848 /* SmallNewsFeedCell.swift */,
 				4A40D34E2842D35000FA1848 /* LargeNewsFeedCell.xib */,
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				4A40D33A28412F9100FA1848 /* NewsFeedViewModel.swift */,
+				4A40D33D2841305600FA1848 /* CustomBinding.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -242,7 +247,6 @@
 		4A40D31C2840EB2C00FA1848 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				4A40D33D2841305600FA1848 /* CustomBinding.swift */,
 				4A40D33C2841303E00FA1848 /* Data */,
 				4A40D3252840EE3F00FA1848 /* Extensions */,
 			);
@@ -389,7 +393,6 @@
 				4A40D3502842D35000FA1848 /* LargeNewsFeedCell.xib in Resources */,
 				4A40D2F02840E84900FA1848 /* Assets.xcassets in Resources */,
 				4A40D34A284235ED00FA1848 /* SmallNewsFeedCell.xib in Resources */,
-				4A40D2EE2840E84800FA1848 /* Main.storyboard in Resources */,
 				4A40D31E2840EC2500FA1848 /* StockTickers.csv in Resources */,
 				4A40D3242840ED1000FA1848 /* NewsFeed.json in Resources */,
 			);
@@ -458,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A40D355284400BE00FA1848 /* TestConstants.swift in Sources */,
 				4A40D33528411E8000FA1848 /* UIImageView+Extension.swift in Sources */,
 				4A40D339284129D800FA1848 /* UICollectionView+Extension.swift in Sources */,
 				4A40D32B2841056A00FA1848 /* DataConvertor.swift in Sources */,
@@ -472,7 +476,6 @@
 				4A40D3432841357000FA1848 /* StockTickerCell.swift in Sources */,
 				4A40D34B284235ED00FA1848 /* SmallNewsFeedCell.swift in Sources */,
 				4A40D33B28412F9100FA1848 /* NewsFeedViewModel.swift in Sources */,
-				4A40D34528414A7F00FA1848 /* HeaderView.swift in Sources */,
 				4A40D2E92840E84800FA1848 /* SceneDelegate.swift in Sources */,
 				4A40D3272840F39B00FA1848 /* Parser.swift in Sources */,
 				4A40D32D28410A2900FA1848 /* NewsFeed.swift in Sources */,
@@ -484,7 +487,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A40D2FE2840E84A00FA1848 /* BarakaTests.swift in Sources */,
+				4A40D356284400BE00FA1848 /* TestConstants.swift in Sources */,
+				4A40D35D28442BDE00FA1848 /* ParserTests.swift in Sources */,
+				4A40D35B28441E2800FA1848 /* DataConvertorTests.swift in Sources */,
+				4A40D3532843FE0E00FA1848 /* NewsFeedViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,14 +519,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4A40D2EC2840E84800FA1848 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4A40D2ED2840E84800FA1848 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4A40D2F12840E84900FA1848 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -582,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -636,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -659,10 +657,10 @@
 				INFOPLIST_FILE = Baraka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,7 +670,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -689,10 +687,10 @@
 				INFOPLIST_FILE = Baraka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,7 +700,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

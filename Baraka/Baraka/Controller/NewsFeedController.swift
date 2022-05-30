@@ -10,9 +10,9 @@ import UIKit
 class NewsFeedController: UIViewController {
     
     enum Section: String, CaseIterable {
-        case stockTickers = "Stock Tickers"
-        case popularNewsFeed = "Popular News Feed"
-        case remindedNewsFeed = "reminded News Feed"
+        case stockTickers
+        case popularNewsFeed
+        case remindedNewsFeed
     }
     private var newsFeedDataSource: UICollectionViewDiffableDataSource<Section, SectionData>! = nil
     private var newsFeedCollectionView: UICollectionView! = nil
@@ -33,17 +33,15 @@ class NewsFeedController: UIViewController {
         configureCollectionView()
         configureDataSource()
     }
-}
-
-extension NewsFeedController {
+    
     /// Get called every 1000 milliseconds when the stock new prices timer get fired.
+    ///
     func refreshStockTickersData() {
         var currentSnapshot = newsFeedDataSource.snapshot()
-        
          // In iOS 15, Apple introduced a new reconfigureItems(_:) snapshots
          // method that helps developers to reload a cell more efficiently.
         if #available(iOS 15.0, *) {
-             currentSnapshot.reconfigureItems(viewModel.stockTickers)
+            currentSnapshot.reconfigureItems(viewModel.stockTickers)
         } else {
             // Fallback on earlier versions
             currentSnapshot.reloadSections([Section.stockTickers])
@@ -57,24 +55,12 @@ extension NewsFeedController {
     fileprivate func configureCollectionView() {
         let collectionView = UICollectionView(frame: view.bounds,
                                               collectionViewLayout: generateLayout())
-        collectionView.contentInset = UIEdgeInsets(top: 16,
-                                                   left: 16,
-                                                   bottom: 16,
-                                                   right: 16)
         view.addSubview(collectionView)
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.backgroundColor = .systemBackground
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.showsHorizontalScrollIndicator = true
         collectionView.registerNib(className: StockTickerCell.self)
         collectionView.registerNib(className: SmallNewsFeedCell.self)
         collectionView.registerNib(className: LargeNewsFeedCell.self)
-        // collectionView.registerNib(className: HeaderView.self)
-        collectionView.register(HeaderView.self,
-                                forSupplementaryViewOfKind: Constants.sectionHeaderElementKind,
-                                withReuseIdentifier: Constants.HeaderViewReuseIdentifier)
-        // collectionView.isScrollEnabled = true
-//        collectionView.showsHorizontalScrollIndicator = true
         newsFeedCollectionView = collectionView
     }
     
@@ -103,26 +89,6 @@ extension NewsFeedController {
                 return cell
             default: return nil
             }
-            
-        }
-        newsFeedDataSource.supplementaryViewProvider = { (
-            collectionView: UICollectionView,
-            kind: String,
-            indexPath: IndexPath)
-            -> UICollectionReusableView? in
-            
-            guard let supplementaryView = collectionView.dequeueReusableSupplementaryView(
-              ofKind: kind,
-              withReuseIdentifier: Constants.HeaderViewReuseIdentifier,
-              for: indexPath) as? HeaderView else {
-                fatalError("Cannot create header view")
-            }
-            
-//            guard let supplementaryView = collectionView.dequeueCell(HeaderView.self, indexPath) else {
-//                fatalError("Cannot create header view")
-//            }
-            supplementaryView.label.text = Section.allCases[indexPath.section].rawValue
-            return supplementaryView
         }
         newsFeedDataSource.apply(snapshotForCurrentNewsFeedState(), animatingDifferences: false)
     }
@@ -140,16 +106,8 @@ extension NewsFeedController {
                                                                    heightDimension: .absolute(Constants.StockTickersGroupHeight))
                 let stockTickersGroup = NSCollectionLayoutGroup.horizontal(layoutSize: stockTickersGroupSize,
                                                                            subitems: [stockTickerItem])
-//                let headerSize = NSCollectionLayoutSize(widthDimension: .absolute(0),
-//                                                        heightDimension: .absolute(44))
-//                let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-//                                                                                elementKind: Constants.sectionHeaderElementKind,
-//                                                                                alignment: .topLeading)
-//                sectionHeader.pinToVisibleBounds = true
-//                let section = NSCollectionLayoutSection(group: popularNewsFeedGroup)
-//                section.boundarySupplementaryItems = [sectionHeader]
-//                return section
                 let section = NSCollectionLayoutSection(group: stockTickersGroup)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)
                 section.interGroupSpacing = 10
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0)
                 section.orthogonalScrollingBehavior = .continuous
