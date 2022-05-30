@@ -1,8 +1,14 @@
 # Baraka
+**User Story** 
+Create a Mobile App to display news feed and stock tickers.
+## Screenshots
 
-Third-party libraries:
-
-1: `SDWebImage` is an async image downloader with cache support. 
+1. Support Light & Dark modes.
+2. Unit testing coverage 85.9%
+3. Support all screen orientations
+4. Third-party libraries:
+****
+ * `SDWebImage` is an async image downloader with cache support. 
 
 WHY did I use? 
 1. I can use with it an activity indicator to show the status of downloading the images which improves the app user experience.
