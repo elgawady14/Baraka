@@ -1,21 +1,26 @@
 //
-//  BarakaTests.swift
+//  DataConvertorTests.swift
 //  BarakaTests
 //
-//  Created by Ahmed Abduljawad on 27/05/2022.
+//  Created by Ahmed Abduljawad on 29/05/2022.
 //
 
 import XCTest
 @testable import Baraka
+class DataConvertorTests: XCTestCase {
 
-class BarakaTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    override func setUpWithError() throws {}
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testFetchStockTickers() {
+        XCTAssertTrue(!DataConvertor.fetchStockTickers().isEmpty)
+    }
+    
+    func testFetchNewsFeed() {
+        XCTAssertTrue(DataConvertor.fetchNewsFeed() != nil)
     }
 
     func testExample() throws {
