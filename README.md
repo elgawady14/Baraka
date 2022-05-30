@@ -7,9 +7,10 @@ Create a Mobile App to display news feed and stock tickers.
 
 ## Features
 1. Support Light & Dark modes.
-2. Unit testing coverage 85.9%
-3. Support all screen orientations
-4. Third-party libraries:
+2. MVVM Design architecture.
+3. Unit testing coverage 85.9%
+5. Support all screen orientations
+6. Third-party libraries:
 ****
  * `SDWebImage` is an async image downloader with cache support. 
 
